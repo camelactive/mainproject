@@ -10,9 +10,12 @@ import {persistStore,
     REGISTER} from "redux-persist"
 import storage from "redux-persist/lib/storage" 
 import listSlice from "./listSlice"
+import fieldSlice from "./fieldSlice"
 
 const rootReducer = combineReducers({
-    listSlice : listSlice
+    listSlice : listSlice,
+    fieldSlice : fieldSlice
+    
 })
 const persistConfig = {
     key: 'root',
