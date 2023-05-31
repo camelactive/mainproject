@@ -1,0 +1,22 @@
+.TopMenu{
+    font-size: 34px;
+    background-color: teal;
+}
+.TopMenu__list{
+    height: 100px;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    background-color: orangered;
+    border-radius: 5px;
+    padding: 20px ;
+  
+}
