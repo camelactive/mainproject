@@ -20,7 +20,7 @@ function App() {
               <Route path='/todo/todoList' element={<TodoList/>}/>
             </Route>
             <Route path='/field' element={<Field/>}/>
-            <Route path='/*' element={<NotFound props = {{timeToMain:10}}/>}/>
+            <Route path='/*' element={<NotFound props = {{timeToMain:4}}/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

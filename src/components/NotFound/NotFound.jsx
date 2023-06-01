@@ -8,11 +8,11 @@ const [count, setCount] = useState(timeToMain)
 const navigate = useNavigate()
 function navigateToMainPAge(timeout) {
     setInterval(() => {
-        setCount(count - 1)
+        setCount(timeout - 1)
     }, 1000);
-    setTimeout(()=>{
+    if (timeout === 0) {
         navigate("/")
-    },timeout*1000)
+    }
 }
 useEffect(()=>{
     navigateToMainPAge(count)
