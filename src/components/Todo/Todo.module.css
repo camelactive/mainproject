@@ -1,6 +1,10 @@
 .Todo{
     width: 100%;
 }
+.TodoDone{
+    width: 100%;
+    background-color: greenyellow;
+}
 .Todo__label{
     gap: 20px;
     display: flex;

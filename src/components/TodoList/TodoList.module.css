@@ -5,6 +5,13 @@
     align-items: center;
     justify-content: space-between;
 }
+.TodoList__todoDone{
+    background-color: greenyellow;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
 .TodoList__todo_text{
     margin-left: 20px;
 }
@@ -13,9 +20,10 @@
     display: flex;
     align-items: center;
 }
-.TodoList__todo_buttonPriority,
+
 .TodoList__todo_buttonDone,
 .TodoList__todo_buttonDelete{
+    width: 140px;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -24,9 +32,7 @@
 .TodoList__todo_buttonDone{
     background-color: green;
 }
-.TodoList__todo_buttonPriority{
-    background-color: goldenrod;
-}
+
 .TodoList__todo_buttonDelete{
     background-color: red;
 }

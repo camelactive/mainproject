@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux"
 import style from "./Todo.module.css"
 import { useState } from "react"
-import {addTodo} from "../../store/todoSlice"
+import {addTodoAction} from "../../store/todoSlice"
 
 const Todo = () => {
 const [newTodo, setNewTodo] = useState("")
 const dispatch = useDispatch()
 function addTodoHandler() {
     if (newTodo.trim() !== "") {
-        dispatch(addTodo({text:newTodo,isDone:false}))
+        dispatch(addTodoAction({text:newTodo,isDone:false}))
         setNewTodo("")
     }
 }
