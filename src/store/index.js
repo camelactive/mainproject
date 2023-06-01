@@ -11,10 +11,12 @@ import {persistStore,
 import storage from "redux-persist/lib/storage" 
 import listSlice from "./listSlice"
 import fieldSlice from "./fieldSlice"
+import todoSlice from "./todoSlice"
 
 const rootReducer = combineReducers({
     listSlice : listSlice,
-    fieldSlice : fieldSlice
+    fieldSlice : fieldSlice,
+    todoSlice : todoSlice
     
 })
 const persistConfig = {
