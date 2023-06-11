@@ -18,9 +18,9 @@ function handleKeyPress (event){
   }
   return (
     <div className="w-full">
-        <label className="flex w-full bg-cyan-500 justify-center p-10 gap-10 items-center">
+        <label className="flex flex-col lg:flex-row w-full bg-cyan-500 justify-center p-10 gap-10 items-center">
             <p>new todo</p>
-            <input value={newTodo} onChange={(event)=>{setNewTodo(event.target.value)}} type="text"  placeholder="your new todo" onKeyDown={handleKeyPress}/>
+            <input className="w-full" value={newTodo} onChange={(event)=>{setNewTodo(event.target.value)}} type="text"  placeholder="your new todo" onKeyDown={handleKeyPress}/>
             <button className="bg-emerald-700 p-3 rounded-md" onClick={addTodoHandler}>add</button>
         </label>
     </div>

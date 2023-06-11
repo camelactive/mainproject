@@ -23,7 +23,7 @@ testArr.map((row,id) => {
 })
 console.log(testArr)
   return (
-    <div className="flex justify-center items-center bg-amber-900 w-full h-full">
+    <div className="flex justify-center items-center bg-amber-900 w-full p-6">
         {testArr.map((element,id)=>{
             return (
                 <div key={id}>
