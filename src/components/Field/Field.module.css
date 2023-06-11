@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    height: 800px;
+    min-width: 800px;
+    min-height: 800px;
     background-color: burlywood;
 }
 .Field__item_black{

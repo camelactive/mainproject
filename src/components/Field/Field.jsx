@@ -1,10 +1,8 @@
-// import { useState } from "react"
 import style from "./Field.module.css"
 import { useSelector } from "react-redux"
 
-const Field = ({props}) => {
+const Field = () => {
 const {rows,columns} = useSelector(state => state.fieldSlice.numbersOfFields)
-// const [fieldBody,setFieldBody] = useState([])
 const testArr = []
 for (let idx = 0; idx < rows; idx++) {
     testArr.push([])
