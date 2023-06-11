@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
 import {deleteTodoAction,doneTodoAction} from "../../store/todoSlice"
-import style from "./TodoList.module.css"
 
 const TodoList = () => {
 const todos = useSelector(state =>state.todoSlice.todos)
@@ -14,16 +13,16 @@ function doneTodohandler({...elemId}) {
   
 }
   return (
-    <div className={style.TodoList}>
+    <div>
         {todos.map((todo,id)=>{
-            return(<div className={todo.isDone ? style.TodoList__todoDone : style.TodoList__todo } key={id}>
-                <p className={style.TodoList__todo_text}>{todo.text}</p>
-                <div className={style.TodoList__todo_buttons}>
-                    <button className={style.TodoList__todo_buttonDone} onClick={()=>doneTodohandler({id})}>
+            return(<div className={todo.isDone ? "bg-green-400 w-full flex items-center justify-between" : "w-full flex items-center justify-between" } key={id}>
+                <p className=" ml-6">{todo.text}</p>
+                <div className="mr-6 flex items-center">
+                    <button className="text-white bg-green-700 p-4 rounded-xl text-4xl w-48" onClick={()=>doneTodohandler({id})}>
                         {todo.isDone && "undone"}
                         {!todo.isDone && "done"}
                     </button>
-                    <button className={style.TodoList__todo_buttonDelete} onClick={()=>deleteTodohandler({id})}>delete</button>
+                    <button className="text-white bg-red-700 p-4 rounded-xl text-4xl"  onClick={()=>deleteTodohandler({id})}>delete</button>
                 </div>
                 </div>)
         })}

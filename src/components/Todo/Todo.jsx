@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux"
-import style from "./Todo.module.css"
 import { useState } from "react"
 import {addTodoAction} from "../../store/todoSlice"
 
@@ -18,11 +17,11 @@ function handleKeyPress (event){
     }
   }
   return (
-    <div className={style.Todo}>
-        <label htmlFor="" className={style.Todo__label}>
+    <div className="w-full">
+        <label className="flex w-full bg-cyan-500 justify-center p-10 gap-10 items-center">
             <p>new todo</p>
-            <input value={newTodo} onChange={(event)=>{setNewTodo(event.target.value)}} type="text" className={style.Todo__label_input} placeholder="your new todo" onKeyDown={handleKeyPress}/>
-            <button className={style.Todo__label_button} onClick={addTodoHandler}>add</button>
+            <input value={newTodo} onChange={(event)=>{setNewTodo(event.target.value)}} type="text"  placeholder="your new todo" onKeyDown={handleKeyPress}/>
+            <button className="bg-emerald-700 p-3 rounded-md" onClick={addTodoHandler}>add</button>
         </label>
     </div>
   )

@@ -1,4 +1,3 @@
-import style from "./Field.module.css"
 import { useSelector } from "react-redux"
 
 const Field = () => {
@@ -24,13 +23,13 @@ testArr.map((row,id) => {
 })
 console.log(testArr)
   return (
-    <div className={style.Field}>
+    <div className="flex justify-center items-center bg-amber-900 w-full h-full">
         {testArr.map((element,id)=>{
             return (
-                <div className={style.Field__item_column} key={id}>
+                <div key={id}>
                         {element.map((fig,id)=>{
                             return (
-                            <p key={id} className={fig.style === "black" ? style.Field__item_black :style.Field__item_white}>{fig.text}</p>
+                            <p key={id} className={fig.style === "black" ? "blackCell" : "whiteCell" }>{fig.text}</p>
                             )
                         })}
                 </div> 
