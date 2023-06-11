@@ -9,12 +9,12 @@ import {persistStore,
     PURGE, 
     REGISTER} from "redux-persist"
 import storage from "redux-persist/lib/storage" 
-import listSlice from "./listSlice"
+import startSlice from "./startSlice"
 import fieldSlice from "./fieldSlice"
 import todoSlice from "./todoSlice"
 
 const rootReducer = combineReducers({
-    listSlice : listSlice,
+    startSlice : startSlice,
     fieldSlice : fieldSlice,
     todoSlice : todoSlice
     

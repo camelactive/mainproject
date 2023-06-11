@@ -11,9 +11,20 @@ const fieldSlice = createSlice({
     reducers : {
         fieldSliceReducer(state, actions){
             console.log("fieldSlice")
+        },
+        fieldChangeReducer(state, action){
+            if (action.payload.userRows > 20 || action.payload.userColumns > 20) {
+                alert("Колличество строк или столбцов не может превышать 20")
+            }
+            if (action.payload && action.payload.userRows && action.payload.userRows <= 20) {
+                state.numbersOfFields.rows = action.payload.userRows
+            }
+            if (action.payload && action.payload.userColumns && action.payload.userColumns <= 20) {
+                state.numbersOfFields.columns = action.payload.userColumns
+            }
         }
     }
 })
 
 export default fieldSlice.reducer
-export const {fieldSliceReducer} = fieldSlice.actions
+export const {fieldSliceReducer,fieldChangeReducer} = fieldSlice.actions
