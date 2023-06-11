@@ -8,8 +8,8 @@
   @apply w-4 h-4 sm:w-16 sm:h-16 flex justify-center items-center m-0 p-0 bg-white text-black border-black border-solid border-2
 }
 .doneTodo {
-  @apply bg-green-400 w-full flex items-center justify-between p-1
+  @apply bg-green-400 w-full flex items-center justify-between p-1 flex-col md:flex-row
 }
 .undoneTodo {
-  @apply bg-inherit w-full flex items-center justify-between p-1
+  @apply bg-inherit w-full flex items-center justify-between p-1 flex-col md:flex-row
 }
