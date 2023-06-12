@@ -9,6 +9,8 @@ const dispatch = useDispatch()
 let {rows,columns} = useSelector(state => state.fieldSlice.numbersOfFields)
 let [userRows ,setUserRows] = useState(rows)
 let [userColumns,setUserColumns] = useState(columns)
+// let [firstCellColor, setFirstCellColor] = useState("#000000")
+// let [secondCellColor ,setSecondCellColor] = useState("#FFFFFF")
 
 function handleUserFieldSet() {
   dispatch(fieldChangeReducer({userRows,userColumns}))
@@ -38,12 +40,14 @@ fieldArr.map((row,id) => {
         <label className="flex justify-between text-lg md:text-4xl w-40 md:w-80">к-во колонок:
           <div>
             <input className="w-10 h-10" type="text" placeholder={rows} value={userRows} onChange={e => setUserRows(userRows = e.target.value)}/>
+            {/* <input type="color" value={firstCellColor} onChange={e => setFirstCellColor(firstCellColor = e.target.value)}className="w-10 h-10"/> */}
           </div>
      
         </label>
         <label className="flex justify-between text-lg md:text-4xl w-40 md:w-80">к-во строк:
           <div> 
             <input className="w-10 h-10" type="text" placeholder={columns} value={userColumns} onChange={e => setUserColumns(userRows = e.target.value)}/>
+            {/* <input type="color" value={secondCellColor} onChange={e => setSecondCellColor(userRows = e.target.value)} className="w-10 h-10"/> */}
           </div>
         
         </label>
@@ -55,7 +59,7 @@ fieldArr.map((row,id) => {
                 <div key={id}>
                         {element.map((fig,id)=>{
                             return (
-                            <p key={id} className={fig.style === "black" ?  "blackCell": `whiteCell` }>{fig.text}</p>
+                            <p key={id} className={fig.style === "black" ? `blackCell` : `whiteCell` }>{fig.text}</p>
                             )
                         })}
                 </div> 

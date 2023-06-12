@@ -1,11 +1,14 @@
+#root {
+  @apply bg-slate-500
+}
 .active {
   color: gold;
 }
 .blackCell {
-  @apply w-4 h-4 sm:w-16 sm:h-16 flex justify-center items-center m-0 p-0 bg-black text-white border-black border-solid border-2
+  @apply w-4 h-4 sm:w-16 sm:h-16 flex justify-center items-center m-0 p-0 bg-black text-white 
 }
 .whiteCell {
-  @apply w-4 h-4 sm:w-16 sm:h-16 flex justify-center items-center m-0 p-0 bg-white text-black border-black border-solid border-2
+  @apply w-4 h-4 sm:w-16 sm:h-16 flex justify-center items-center m-0 p-0 bg-white text-black 
 }
 .doneTodo {
   @apply bg-green-400 w-full flex items-center justify-between p-1 flex-col md:flex-row

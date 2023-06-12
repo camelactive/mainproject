@@ -10,7 +10,7 @@ import TodoList from './components/TodoList/TodoList';
 
 function App() {
   return (
-    <div className="text-center box-content text-4xl m-0 p-0">
+    <div className="text-center box-content text-4xl p-0 max-w-screen-2xl m-auto">
       <BrowserRouter>
         <Routes>
           <Route element={<MainPage/>}>
