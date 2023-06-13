@@ -8,6 +8,7 @@ const TopMenu = () => {
             <li><NavLink className="text-sm md:text-4xl bg-orange-600 p-3 rounded-md text-black" to={"/"}>Start</NavLink></li>
             <li><NavLink className="text-sm md:text-4xl bg-orange-600 p-3 rounded-md text-black" to={"/todo"}>Todo</NavLink></li>
             <li><NavLink className="text-sm md:text-4xl bg-orange-600 p-3 rounded-md text-black" to={"/field"}>Field</NavLink></li>
+            <li><NavLink className="text-sm md:text-4xl bg-orange-600 p-3 rounded-md text-black" to={"/more"}>More</NavLink></li>
         </ul>
     </div>
   )

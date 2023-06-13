@@ -7,6 +7,10 @@ import Todo from './components/Todo/Todo';
 import Field from './components/Field/Field';
 import TodosLable from './layouts/TodosLable/TodosLable';
 import TodoList from './components/TodoList/TodoList';
+import More from './components/More/More';
+import MoreOne from './components/MoreOne/MoreOne';
+import MoreTwo from './components/MoreTwo/MoreTwo';
+import NotReady from './components/NotReady/NotReady';
 
 function App() {
   return (
@@ -20,7 +24,12 @@ function App() {
               <Route path='/todo/todoList' element={<TodoList/>}/>
             </Route>
             <Route path='/field' element={<Field/>}/>
+              <Route path='/more' element={<More/>}>
+                <Route path='/more/more-one' element={<MoreOne/>}/>
+                <Route path='/more/more-two' element={<MoreTwo/>}/>
+              </Route>
             <Route path='/*' element={<NotFound props = {{timeToMain:4}}/>}/>
+            <Route path='/notReady' element={<NotReady/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
